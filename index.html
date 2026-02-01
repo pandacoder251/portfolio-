@@ -8,7 +8,8 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Premium Fonts -->
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&f[]=satoshi@700,500,400&display=swap"
+        rel="stylesheet">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Lucide Icons -->
@@ -28,7 +29,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .font-heading {
+        h1,
+        h2,
+        h3,
+        .font-heading {
             font-family: 'Open Sans';
         }
 
@@ -45,7 +49,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -80,11 +84,12 @@
             0% {
                 background-position: left;
             }
+
             100% {
                 background-position: right;
             }
         }
-        
+
 
         .animated-underline {
             position: relative;
@@ -170,7 +175,7 @@
             height: 100%;
             z-index: -2;
             background-color: #020617;
-            background-image: 
+            background-image:
                 radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.32) 0px, transparent 60%),
                 radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.28) 0px, transparent 60%),
                 radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.18) 0px, transparent 60%),
@@ -192,13 +197,16 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: #020617;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #1e293b;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #3b82f6;
         }
@@ -207,7 +215,7 @@
             overflow: hidden;
         }
 
-    
+
 
         @media (max-width: 768px) {
             .text-huge {
@@ -225,22 +233,29 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 p-4 md:p-6 transition-all duration-700" id="header">
-        <div class="max-w-7xl mx-auto glass-card rounded-[2rem] px-6 py-3 flex items-center justify-between border-white/10 shadow-2xl">
+        <div
+            class="max-w-7xl mx-auto glass-card rounded-[2rem] px-6 py-3 flex items-center justify-between border-white/10 shadow-2xl">
             <div class="flex items-center gap-6">
                 <a href="#" class="text-xl font-black tracking-tighter flex items-center gap-3 group">
-                    <div class="bg-blue-600 w-10 h-10 rounded-xl flex items-center justify-center text-white text-lg shadow-lg shadow-blue-600/40 group-hover:rotate-12 transition-transform">P</div>
-                    <span class="hidden sm:inline-block tracking-[0.25em] text-[11px] font-bold text-slate-200">POUSALI</span>
+                    <div
+                        class="bg-blue-600 w-10 h-10 rounded-xl flex items-center justify-center text-white text-lg shadow-lg shadow-blue-600/40 group-hover:rotate-12 transition-transform">
+                        P</div>
+                    <span
+                        class="hidden sm:inline-block tracking-[0.25em] text-[11px] font-bold text-slate-200">POUSALI</span>
                 </a>
-                
+
                 <div class="hidden lg:flex items-center gap-4 pl-6 border-l border-white/10">
-                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-emerald-400">
-                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10b981]"></span>
+                    <div
+                        class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+                        <span
+                            class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10b981]"></span>
                         Available for Projects
                     </div>
                 </div>
             </div>
 
-            <nav class="hidden md:flex items-center gap-10 font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400">
+            <nav
+                class="hidden md:flex items-center gap-10 font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400">
                 <a href="#about" class="nav-link hover:text-white">About</a>
                 <a href="#skills" class="nav-link hover:text-white">Skills</a>
                 <a href="#hackathons" class="nav-link hover:text-white">Works</a>
@@ -250,8 +265,11 @@
             </nav>
 
             <div class="flex items-center gap-4">
-                <div id="live-clock" class="hidden lg:block text-[10px] font-bold uppercase tracking-widest text-slate-500 mr-4">00:00:00</div>
-                <a href="#contact" class="hidden sm:flex bg-white text-black px-6 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all transform active:scale-95 shadow-xl">
+                <div id="live-clock"
+                    class="hidden lg:block text-[10px] font-bold uppercase tracking-widest text-slate-500 mr-4">00:00:00
+                </div>
+                <a href="#contact"
+                    class="hidden sm:flex bg-white text-black px-6 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all transform active:scale-95 shadow-xl">
                     Hire Me
                 </a>
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
@@ -265,30 +283,35 @@
     <main>
         <section class="min-h-screen flex flex-col items-center justify-center px-6 relative">
             <div class="text-center z-10 max-w-5xl" data-aos="fade-up">
-                <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-card text-[10px] font-bold tracking-[0.3em] uppercase mb-8 text-blue-400 border-blue-500/20">
+                <div
+                    class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-card text-[10px] font-bold tracking-[0.3em] uppercase mb-8 text-blue-400 border-blue-500/20">
                     Full-Stack Developer
                 </div>
-                
+
                 <h1 class="text-huge font-extrabold mb-8 gradient-text uppercase">
                     Pousali<span class="text-slate-300"> Dolai</span>
                 </h1>
-                
+
                 <p class="max-w-xl mx-auto text-slate-400 text-base md:text-lg font-medium leading-relaxed mb-12">
-                    Turning <span id = "quote" class="text-white italic">Dreams</span> into  <span id="quote" class="text-white italic ">Bytes</span> 
+                    Turning <span id="quote" class="text-white italic">Dreams</span> into <span id="quote"
+                        class="text-white italic ">Bytes</span>
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-white text-black rounded-xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl">
+                    <a href="#projects"
+                        class="px-8 py-4 bg-white text-black rounded-xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl">
                         Works
                     </a>
-                    <a href="https://github.com/pandacoder251" target="_blank" class="px-8 py-4 glass-card rounded-xl font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-white/5 flex items-center gap-3">
+                    <a href="https://github.com/pandacoder251" target="_blank"
+                        class="px-8 py-4 glass-card rounded-xl font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-white/5 flex items-center gap-3">
                         <i data-lucide="github" class="w-4 h-4"></i> GitHub
                     </a>
                 </div>
             </div>
-            
+
             <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-30">
-                <span class="text-[9px] font-black uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr]">Scroll</span>
+                <span
+                    class="text-[9px] font-black uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr]">Scroll</span>
                 <div class="w-px h-12 bg-gradient-to-b from-white to-transparent"></div>
             </div>
         </section>
@@ -302,22 +325,32 @@
                         <h2 class="text-5xl md:text-7xl font-bold mb-10 leading-[1.1] tracking-tighter">
                             Personal<br><span class="italic text-slate-500 animated-underline">Experience</span>
                         </h2>
-                         <div class="pt-8 border-t border-white/5">
+                        <div class="pt-8 border-t border-white/5">
                             <p class="text-sm font-bold uppercase tracking-[0.3em] text-slate-500 mb-4">Ideology</p>
-                            <p class="text-2xl font-bold italic text-white tracking-tight">“Create for a better tomorrow.”</p>
+                            <p class="text-2xl font-bold italic text-white tracking-tight">“Create for a better
+                                tomorrow.”</p>
                         </div>
                     </div>
-                    <div class="lg:col-span-7 space-y-8 text-slate-400 text-lg md:text-xl leading-relaxed mt-12 lg:mt-24" data-aos="fade-left">
+                    <div class="lg:col-span-7 space-y-8 text-slate-400 text-lg md:text-xl leading-relaxed mt-12 lg:mt-24"
+                        data-aos="fade-left">
                         <p>
-                            I believe the best software is not just functional, but intuitive. With a background in art, I often see code as an architectural blueprint where balance, clarity, and flow matter as much as logic. This perspective shapes how I design and build digital experiences.
+                            I believe the best software is not just functional, but intuitive. With a background in art,
+                            I often see code as an architectural blueprint where balance, clarity, and flow matter as
+                            much as logic. This perspective shapes how I design and build digital experiences.
                         </p>
                         <p>
-                            I am currently a B.Tech Computer Science and Engineering student at the Institute of Technical Education and Research, Siksha ‘O’ Anusandhan (Deemed to be University). My academic journey began in Jamshedpur, where I completed my schooling at Jamshedpur Public School (A.I.W.C), securing 94.5% in my Class 10 examinations and 80.5% in Class 12.
+                            I am currently a B.Tech Computer Science and Engineering student at the Institute of
+                            Technical Education and Research, Siksha ‘O’ Anusandhan (Deemed to be University). My
+                            academic journey began in Jamshedpur, where I completed my schooling at Jamshedpur Public
+                            School (A.I.W.C), securing 94.5% in my Class 10 examinations and 80.5% in Class 12.
                         </p>
                         <p>
-                            Beyond the terminal, I serve as a core content team at SOA English Café, where I explore the intersection of communication, creativity, and leadership. When I need a mental reset, I turn to chess, quietly studying patterns, strategy, and decision-making. This blend of creative expression and analytical thinking defines my approach to every project I take on.
+                            Beyond the terminal, I serve as a core content team at SOA English Café, where I explore the
+                            intersection of communication, creativity, and leadership. When I need a mental reset, I
+                            turn to chess, quietly studying patterns, strategy, and decision-making. This blend of
+                            creative expression and analytical thinking defines my approach to every project I take on.
                         </p>
-                       
+
                     </div>
                 </div>
             </div>
@@ -333,7 +366,8 @@
                             The Tech<br><span class="italic text-slate-500 animated-underline">Forge</span>
                         </h2>
                     </div>
-                    <div class="text-slate-500 text-xs font-bold uppercase tracking-widest max-w-xs text-right hidden md:block">
+                    <div
+                        class="text-slate-500 text-xs font-bold uppercase tracking-widest max-w-xs text-right hidden md:block">
                         Continuously evolving with modern standards and emerging frameworks.
                     </div>
                 </div>
@@ -341,71 +375,85 @@
                 <div class="grid md:grid-cols-3 gap-12">
                     <!-- Column 1 -->
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="0">
-                        <h3 class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
+                        <h3
+                            class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
                             Frontend <span class="h-px flex-grow bg-white/5"></span>
                         </h3>
                         <div class="space-y-3">
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">HTML:5</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Vanilla JS</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">React / Next.js</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Tailwind CSS</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Three.js</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 2 -->
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
+                        <h3
+                            class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
                             Backend <span class="h-px flex-grow bg-white/5"></span>
                         </h3>
                         <div class="space-y-3">
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Node + Express</span>
-                                <i data-lucide="check" class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Mongo</span>
-                                <i data-lucide="check" class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Java</span>
-                                <i data-lucide="check" class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Python</span>
-                                <i data-lucide="check" class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 3 -->
                     <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
+                        <h3
+                            class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-4">
                             Infrastructure <span class="h-px flex-grow bg-white/5"></span>
                         </h3>
                         <div class="space-y-3">
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">Git</span>
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                             <div class="skill-item p-4 rounded-xl flex justify-between items-center group">
                                 <span class="font-bold text-sm">System Design</span>
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                             </div>
                         </div>
                     </div>
@@ -424,59 +472,76 @@
                         </h2>
                     </div>
                     <div data-aos="fade-left">
-                        <a href="https://github.com/pandacoder251" target="_blank" class="group flex items-center gap-4 text-white font-bold uppercase tracking-[0.4em] text-[10px] bg-white/5 py-4 px-8 rounded-full border border-white/10 hover:bg-blue-600 transition-all">
-                            View Github <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                        <a href="https://github.com/pandacoder251" target="_blank"
+                            class="group flex items-center gap-4 text-white font-bold uppercase tracking-[0.4em] text-[10px] bg-white/5 py-4 px-8 rounded-full border border-white/10 hover:bg-blue-600 transition-all">
+                            View Github <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Project 1 -->
-                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative"
+                        data-aos="fade-up">
                         <div class="relative z-10">
                             <div class="mb-12 flex justify-between items-center">
-                                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                <div
+                                    class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                                     <i data-lucide="package" class="w-7 h-7"></i>
                                 </div>
                                 <div class="flex gap-2">
-                                    <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Frontend</span>
+                                    <span
+                                        class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Frontend</span>
                                 </div>
                             </div>
-                            <h3 class="text-4xl font-bold mb-6 group-hover:translate-x-2 transition-transform">CuzDoor</h3>
+                            <h3 class="text-4xl font-bold mb-6 group-hover:translate-x-2 transition-transform">CuzDoor
+                            </h3>
                             <p class="text-slate-400 text-lg mb-10 leading-relaxed max-w-sm">
-                                Optimized logistics for student hostel deliveries. Reduced latency in order processing by 40% using specialized caching.
+                                Optimized logistics for student hostel deliveries. Reduced latency in order processing
+                                by 40% using specialized caching.
                             </p>
                             <div class="flex items-center gap-6">
-                                <a href="https://github.com/pandacoder251/Cuzdoor-servive-main" target="_blank" class="inline-flex items-center gap-3 font-black text-[10px] uppercase tracking-[0.2em] text-white hover:text-blue-400 transition-colors">
+                                <a href="https://github.com/pandacoder251/Cuzdoor-servive-main" target="_blank"
+                                    class="inline-flex items-center gap-3 font-black text-[10px] uppercase tracking-[0.2em] text-white hover:text-blue-400 transition-colors">
                                     Repository<i data-lucide="github" class="w-4 h-4"></i>
                                 </a>
                                 <span class="w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
-                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">React.js</span>
+                                <span
+                                    class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">React.js</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative z-10">
                             <div class="mb-12 flex justify-between items-center">
-                                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
+                                <div
+                                    class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
                                     <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
                                 </div>
                                 <div class="flex gap-2">
-                                    <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Full Stack</span>
+                                    <span
+                                        class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Full
+                                        Stack</span>
                                 </div>
                             </div>
-                            <h3 class="text-4xl font-bold mb-6 group-hover:translate-x-2 transition-transform">Interest Calculator</h3>
+                            <h3 class="text-4xl font-bold mb-6 group-hover:translate-x-2 transition-transform">Interest
+                                Calculator</h3>
                             <p class="text-slate-400 text-lg mb-10 leading-relaxed max-w-sm">
-                                High-precision financial analysis tool for complex interest modeling. Built for scale with real-time data visualization.
+                                High-precision financial analysis tool for complex interest modeling. Built for scale
+                                with real-time data visualization.
                             </p>
                             <div class="flex items-center gap-6">
-                                <a href="https://github.com/pandacoder251/interest-calculator-main" target="_blank" class="inline-flex items-center gap-3 font-black text-[10px] uppercase tracking-[0.2em] text-white hover:text-purple-400 transition-colors">
+                                <a href="https://github.com/pandacoder251/interest-calculator-main" target="_blank"
+                                    class="inline-flex items-center gap-3 font-black text-[10px] uppercase tracking-[0.2em] text-white hover:text-purple-400 transition-colors">
                                     Repository <i data-lucide="github" class="w-4 h-4"></i>
                                 </a>
                                 <span class="w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
-                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">React.js + Node + JWT + MongoDB</span>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">React.js +
+                                    Node + JWT + MongoDB</span>
                             </div>
                         </div>
                     </div>
@@ -484,12 +549,13 @@
             </div>
         </section>
 
-         <!-- Work Experience Section -->
+        <!-- Work Experience Section -->
         <section id="workexperience" class="py-32 px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
                     <div data-aos="fade-right">
-                        <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Work Experience</span>
+                        <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Work
+                            Experience</span>
                         <h2 class="text-4xl md:text-6xl font-bold leading-[0.9] tracking-tighter">
                             Professional<br><span class="italic text-slate-500 animated-underline">Journey</span>
                         </h2>
@@ -497,32 +563,41 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Certification Card -->
-                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative"
+                        data-aos="fade-up">
                         <div class="relative z-10">
                             <div class="mb-8 flex items-center gap-4">
-                                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                <div
+                                    class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                                     <i data-lucide="award" class="w-7 h-7"></i>
                                 </div>
-                                <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Certification</span>
+                                <span
+                                    class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Certification</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-2">Unlox Edge Certification</h3>
-                            <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-4">Job Bridge Program</div>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-2">Pousali Dolai has successfully completed all modules of the Job Bridge Program and has been awarded the Unlox Edge Certification specialized in Web Development.</p>
+                            <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-4">Job Bridge
+                                Program</div>
                             <ul class="text-xs text-slate-400 mb-2">
-                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino Students Association</li>
+                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino
+                                    Students Association</li>
                                 <li><span class="font-bold text-white">Issue Date:</span> December 2025</li>
                                 <li><span class="font-bold text-white">Expiration Date:</span> December 2025</li>
                                 <li><span class="font-bold text-white">Credential ID:</span> UNXWD-1225-4320</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1yrh5z-BZTdN80_Y84VkadNI7SUkDUSfU/view?usp=drivesdk" target="_blank" class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            <a href="https://drive.google.com/file/d/1yrh5z-BZTdN80_Y84VkadNI7SUkDUSfU/view?usp=drivesdk"
+                                target="_blank"
+                                class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View
+                                Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
                             <div class="mt-4">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">HTML:5</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Tailwind CSS</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JavaScript</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">React JS</span>
-                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js + Express</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js +
+                                        Express</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">MongoDB</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Firebase</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JWT</span>
@@ -533,29 +608,42 @@
                     </div>
 
                     <!-- Internship Card -->
-                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="relative z-10">
                             <div class="mb-8 flex items-center gap-4">
-                                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
+                                <div
+                                    class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
                                     <i data-lucide="briefcase" class="w-7 h-7"></i>
                                 </div>
-                                <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Internship</span>
+                                <span
+                                    class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Internship</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-2">Internship in Web Development</h3>
-                            <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-4">United Latino Students Association</div>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-2">Issued January 2026</p>
-                             <ul class="text-xs text-slate-400 mb-2">
-                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino Students Association</li>
+                            <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-4">United
+                                Latino Students Association</div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-2">Internship & Project-based Learning
+                                Program as part of the
+                                Job Bridge initiative and has been awarded the Unlox Edge Certification in collaboration
+                                With the Trivion Technology in Web Development</p>
+                            <ul class="text-xs text-slate-400 mb-2">
+                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino
+                                    Students Association</li>
                                 <li><span class="font-bold text-white">Start Date:</span> December 2025</li>
                                 <li><span class="font-bold text-white">End Date:</span> January 2026</li>
                                 <li><span class="font-bold text-white">Credential ID:</span> UNXWD-INT-4222</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1zNGSardZQOg-MTjJOYFpmVq1T36zCkrh/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            <a href="https://drive.google.com/file/d/1zNGSardZQOg-MTjJOYFpmVq1T36zCkrh/view?usp=sharing"
+                                target="_blank"
+                                class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View
+                                Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
                             <div class="mt-4">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">React JS</span>
-                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js + Express</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js +
+                                        Express</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">MongoDB</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Firebase</span>
                                     <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JWT</span>
@@ -572,41 +660,58 @@
         <section id="hackathons" class="py-32 px-6">
             <div class="max-w-7xl mx-auto">
                 <div data-aos="fade-right">
-                        <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Events</span>
-                        <h2 class="text-4xl md:text-6xl font-bold leading-[0.9] tracking-tighter mb-10">
-                            Hackathon and <br><span class="italic text-slate-500 animated-underline">Events</span>
-                        </h2>
-                    </div>
+                    <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Events</span>
+                    <h2 class="text-4xl md:text-6xl font-bold leading-[0.9] tracking-tighter mb-10">
+                        Hackathon and <br><span class="italic text-slate-500 animated-underline">Events</span>
+                    </h2>
+                </div>
                 <div class="grid md:grid-cols-3 gap-10">
                     <!-- Card 1 -->
-                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-blue-500/20 transition-shadow duration-500" data-aos="fade-up">
+                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-blue-500/20 transition-shadow duration-500"
+                        data-aos="fade-up">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="text-blue-500 group-hover:scale-110 transition-transform"><i data-lucide="trophy" class="w-10 h-10"></i></div>
-                            <span class="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest">Finalist</span>
+                            <div class="text-blue-500 group-hover:scale-110 transition-transform"><i
+                                    data-lucide="trophy" class="w-10 h-10"></i></div>
+                            <span
+                                class="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest">Finalist</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">HackEnigma</h3>
-                        <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-4">Smart India Hackathon</div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Top 100 teams nationally. Developed smart governance tools for public infrastructure.</p>
+                        <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-4">Smart India
+                            Hackathon</div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Top 100 teams nationally. Developed smart
+                            governance tools for public infrastructure.</p>
                     </div>
                     <!-- Card 2 -->
-                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-purple-500/20 transition-shadow duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-purple-500/20 transition-shadow duration-500"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="text-purple-500 group-hover:scale-110 transition-transform"><i data-lucide="terminal" class="w-10 h-10"></i></div>
-                            <span class="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-500 text-[10px] font-black uppercase tracking-widest">Regional Power-Builder</span>
+                            <div class="text-purple-500 group-hover:scale-110 transition-transform"><i
+                                    data-lucide="terminal" class="w-10 h-10"></i></div>
+                            <span
+                                class="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-500 text-[10px] font-black uppercase tracking-widest">Regional
+                                Power-Builder</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Hack Odisha 5.0</h3>
-                        <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-4">36-Hour Sprint</div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Collaborative sprint focusing on sustainable tech solutions and accessible UI design.</p>
+                        <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-4">36-Hour Sprint
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Collaborative sprint focusing on sustainable
+                            tech solutions and accessible UI design.</p>
                     </div>
                     <!-- Card 3 -->
-                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-emerald-500/20 transition-shadow duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-10 rounded-[2.5rem] group shadow-xl hover:shadow-emerald-500/20 transition-shadow duration-500"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="text-emerald-500 group-hover:scale-110 transition-transform"><i data-lucide="brain-circuit" class="w-10 h-10"></i></div>
-                            <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-500 text-[10px] font-black uppercase tracking-widest">Buildathon 2025</span>
+                            <div class="text-emerald-500 group-hover:scale-110 transition-transform"><i
+                                    data-lucide="brain-circuit" class="w-10 h-10"></i></div>
+                            <span
+                                class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-500 text-[10px] font-black uppercase tracking-widest">Buildathon
+                                2025</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Dreamflow</h3>
-                        <div class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-4">AI & Generative Interfaces</div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Prototyping future-forward AI workflows and exploring generative interface boundaries.</p>
+                        <div class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-4">AI &
+                            Generative Interfaces</div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Prototyping future-forward AI workflows and
+                            exploring generative interface boundaries.</p>
                     </div>
                 </div>
             </div>
@@ -614,27 +719,32 @@
 
         <!-- CTA Section -->
         <section id="contact" class="py-32 px-6">
-            <div class="max-w-5xl mx-auto glass-card p-16 md:p-32 rounded-[4rem] text-center relative overflow-hidden" data-aos="zoom-in">
+            <div class="max-w-5xl mx-auto glass-card p-16 md:p-32 rounded-[4rem] text-center relative overflow-hidden"
+                data-aos="zoom-in">
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-6xl font-bold mb-12 tracking-tighter leading-[0.95]">
-                        Let's build<br><span class="italic text-slate-500 animated-underline">The Future</span>
+                    <h2 class="text-3xl md:text-6xl font-bold mb-12 tracking-tighter leading-[0.95]"> 
+                        <span class="font-extrabold mb-8 gradient-text"> Let's build </span><br><span class="italic text-slate-500 animated-underline">The Future</span>
                     </h2>
-                    
+
                     <div class="flex flex-wrap justify-center gap-6 mt-16">
-                        <a href="mailto:pousalidolai59@gmail.com" class="px-10 py-5 bg-white text-black rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl flex items-center gap-4">
+                        <a href="mailto:pousalidolai59@gmail.com"
+                            class="px-10 py-5 bg-white text-black rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-600 hover:text-white transition-all shadow-2xl flex items-center gap-4">
                             Send an Inquiry <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <div class="flex gap-4">
-                            <a href="https://www.linkedin.com/in/pousali-dolai-b8971a344/" target="_blank" class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all group">
-                                <i data-lucide="linkedin" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+                            <a href="https://www.linkedin.com/in/pousali-dolai-b8971a344/" target="_blank"
+                                class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all group">
+                                <i data-lucide="linkedin"
+                                    class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
                             </a>
-                            <a href="https://github.com/pandacoder251" target="_blank" class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all group">
+                            <a href="https://github.com/pandacoder251" target="_blank"
+                                class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all group">
                                 <i data-lucide="github" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Background decoration -->
                 <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full"></div>
                 <div class="absolute -top-20 -right-20 w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full"></div>
@@ -653,11 +763,13 @@
                     Crafted with precision & passion.
                 </div>
             </div>
-            
+
             <nav class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
                 <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="https://github.com/pandacoder251" target="_blank" class="hover:text-white transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/pousali-dolai-b8971a344/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://github.com/pandacoder251" target="_blank"
+                    class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/pousali-dolai-b8971a344/" target="_blank"
+                    class="hover:text-white transition-colors">LinkedIn</a>
             </nav>
         </div>
     </footer>
@@ -714,7 +826,7 @@
             const now = new Date();
             const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
             const clockEl = document.getElementById('live-clock');
-            if(clockEl) clockEl.textContent = timeStr;
+            if (clockEl) clockEl.textContent = timeStr;
         }
         setInterval(updateClock, 1000);
         updateClock();
@@ -724,7 +836,7 @@
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > 50) {
                 header.style.padding = '12px 24px';
                 header.querySelector('.max-w-7xl').classList.add('shadow-2xl');
@@ -732,7 +844,7 @@
                 header.style.padding = '24px';
                 header.querySelector('.max-w-7xl').classList.remove('shadow-2xl');
             }
-            
+
             if (currentScroll > lastScroll && currentScroll > 600) {
                 header.style.transform = 'translateY(-120%)';
             } else {
@@ -751,4 +863,5 @@
         });
     </script>
 </body>
+
 </html>
