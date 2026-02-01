@@ -38,21 +38,6 @@
             letter-spacing: -0.05em;
         }
 
-        /* Mesh Gradient Background */
-        .mesh-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background-color: #020617;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.12) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(30, 64, 175, 0.08) 0px, transparent 50%);
-        }
-
         .grid-overlay {
             position: fixed;
             top: 0;
@@ -68,7 +53,7 @@
         }
 
         .glass-card {
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(15, 23, 42, 0.137);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -77,16 +62,29 @@
 
         .glass-card:hover {
             border-color: rgba(59, 130, 246, 0.4);
-            background: rgba(15, 23, 42, 0.6);
             transform: translateY(-8px);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         .gradient-text {
-            background: linear-gradient(to bottom right, #ffffff 30%, #60a5fa 60%, #a78bfa 90%);
+            background: linear-gradient(90deg, #fff 0%, #60a5fa 40%, #a78bfa 80%, #f472b6 100%);
+            background-size: 200% 200%;
+            background-position: left;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: gradient-move 3s ease-in-out infinite alternate;
         }
+
+        @keyframes gradient-move {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
+        }
+        
 
         .animated-underline {
             position: relative;
@@ -244,7 +242,8 @@
                 <a href="#about" class="nav-link hover:text-white">About</a>
                 <a href="#skills" class="nav-link hover:text-white">Skills</a>
                 <a href="#hackathons" class="nav-link hover:text-white">Works</a>
-                <a href="#projects" class="nav-link hover:text-white">Events</a>
+                <a href="#workexperience" class="nav-link hover:text-white">Experience</a>
+                <a href="#hackathons" class="nav-link hover:text-white">Events</a>
                 <a href="#contact" class="nav-link hover:text-white">Contact</a>
             </nav>
 
@@ -301,29 +300,22 @@
                         <h2 class="text-5xl md:text-7xl font-bold mb-10 leading-[1.1] tracking-tighter">
                             Personal<br><span class="italic text-slate-500 animated-underline">Experience</span>
                         </h2>
-                        <div class="flex gap-4">
-                            <div class="p-6 glass-card rounded-3xl group">
-                                <i data-lucide="layout" class="text-blue-400 w-8 h-8 mb-4 group-hover:scale-110 transition-transform"></i>
-                                <p class="text-[9px] font-black uppercase tracking-widest text-slate-500">System Design</p>
-                            </div>
-                            <div class="p-6 glass-card rounded-3xl group">
-                                <i data-lucide="palette" class="text-purple-400 w-8 h-8 mb-4 group-hover:scale-110 transition-transform"></i>
-                                <p class="text-[9px] font-black uppercase tracking-widest text-slate-500">Creative UI</p>
-                            </div>
+                         <div class="pt-8 border-t border-white/5">
+                            <p class="text-sm font-bold uppercase tracking-[0.3em] text-slate-500 mb-4">Ideology</p>
+                            <p class="text-2xl font-bold italic text-white tracking-tight">“Create for a better tomorrow.”</p>
                         </div>
                     </div>
-                    
                     <div class="lg:col-span-7 space-y-8 text-slate-400 text-lg md:text-xl leading-relaxed mt-12 lg:mt-24" data-aos="fade-left">
                         <p>
-                            I believe the best software isn't just functional; it's intuitive. My background as a <span class="text-white"> artist</span> allows me to see code structures as architectural blueprints where balance and flow are paramount.
+                            I believe the best software is not just functional, but intuitive. With a background in art, I often see code as an architectural blueprint where balance, clarity, and flow matter as much as logic. This perspective shapes how I design and build digital experiences.
                         </p>
                         <p>
-                            When I'm not in the terminal, you'll find me at <span class="text-blue-400 font-bold">SOA English Cafe</span> as a core content strategist or analyzing patterns on a <span class="text-white italic">chess board</span>. This blend of creative communication and strategic logic defines my approach to every project.
+                            I am currently a B.Tech Computer Science and Engineering student at the Institute of Technical Education and Research, Siksha ‘O’ Anusandhan (Deemed to be University). My academic journey began in Jamshedpur, where I completed my schooling at Jamshedpur Public School (A.I.W.C), securing 94.5% in my Class 10 examinations and 80.5% in Class 12.
                         </p>
-                        <div class="pt-8 border-t border-white/5">
-                            <p class="text-sm font-bold uppercase tracking-[0.3em] text-slate-500 mb-4">Ideology</p>
-                            <p class="text-2xl font-bold italic text-white tracking-tight">"Create for better Tomorrow."</p>
-                        </div>
+                        <p>
+                            Beyond the terminal, I serve as a core content strategist at SOA English Café, where I explore the intersection of communication, creativity, and leadership. When I need a mental reset, I turn to chess, quietly studying patterns, strategy, and decision-making. This blend of creative expression and analytical thinking defines my approach to every project I take on.
+                        </p>
+                       
                     </div>
                 </div>
             </div>
@@ -490,6 +482,90 @@
             </div>
         </section>
 
+         <!-- Work Experience Section -->
+        <section id="workexperience" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+                    <div data-aos="fade-right">
+                        <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Work Experience</span>
+                        <h2 class="text-4xl md:text-6xl font-bold leading-[0.9] tracking-tighter">
+                            Professional<br><span class="italic text-slate-500 animated-underline">Journey</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Certification Card -->
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up">
+                        <div class="relative z-10">
+                            <div class="mb-8 flex items-center gap-4">
+                                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                    <i data-lucide="award" class="w-7 h-7"></i>
+                                </div>
+                                <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Certification</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Unlox Edge Certification</h3>
+                            <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-4">Job Bridge Program</div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-2">Pousali Dolai has successfully completed all modules of the Job Bridge Program and has been awarded the Unlox Edge Certification specialized in Web Development.</p>
+                            <ul class="text-xs text-slate-400 mb-2">
+                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino Students Association</li>
+                                <li><span class="font-bold text-white">Issue Date:</span> December 2025</li>
+                                <li><span class="font-bold text-white">Expiration Date:</span> December 2025</li>
+                                <li><span class="font-bold text-white">Credential ID:</span> UNXWD-1225-4320</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/1yrh5z-BZTdN80_Y84VkadNI7SUkDUSfU/view?usp=drivesdk" target="_blank" class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            <div class="mt-4">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">HTML:5</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Tailwind CSS</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JavaScript</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">React JS</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js + Express</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">MongoDB</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Firebase</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JWT</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internship Card -->
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] group overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative z-10">
+                            <div class="mb-8 flex items-center gap-4">
+                                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
+                                    <i data-lucide="briefcase" class="w-7 h-7"></i>
+                                </div>
+                                <span class="text-[9px] font-black uppercase tracking-widest bg-white/5 py-1.5 px-3 rounded-lg border border-white/10">Internship</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Internship in Web Development</h3>
+                            <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-4">United Latino Students Association</div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-2">Issued January 2026</p>
+                             <ul class="text-xs text-slate-400 mb-2">
+                                <li><span class="font-bold text-white">Issuing Organization:</span> United Latino Students Association</li>
+                                <li><span class="font-bold text-white">Start Date:</span> December 2025</li>
+                                <li><span class="font-bold text-white">End Date:</span> January 2026</li>
+                                <li><span class="font-bold text-white">Credential ID:</span> UNXWD-INT-4222</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/1zNGSardZQOg-MTjJOYFpmVq1T36zCkrh/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-600 transition-colors mb-2">View Certificate <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            <div class="mt-4">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2 block">Skills</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">React JS</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Node.js + Express</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">MongoDB</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">Firebase</span>
+                                    <span class="skill-item px-3 py-1 rounded-lg text-xs font-bold">JWT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Events Section -->
         <section id="hackathons" class="py-32 px-6">
             <div class="max-w-7xl mx-auto">
@@ -578,7 +654,6 @@
             
             <nav class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
                 <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#projects" class="hover:text-white transition-colors">Work</a>
                 <a href="https://github.com/pandacoder251" target="_blank" class="hover:text-white transition-colors">GitHub</a>
                 <a href="https://www.linkedin.com/in/pousali-dolai-b8971a344/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
             </nav>
