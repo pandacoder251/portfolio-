@@ -862,6 +862,60 @@
             });
         });
     </script>
+</script>
+<script>
+// Smooth scroll for nav links
+document.querySelectorAll('nav a.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+});
+
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+let mobileMenu = document.getElementById('mobile-menu');
+if (!mobileMenu) {
+    // Create mobile menu if not present
+    mobileMenu = document.createElement('nav');
+    mobileMenu.id = 'mobile-menu';
+    mobileMenu.className = 'fixed top-0 right-0 w-2/3 max-w-xs h-full bg-slate-900 z-[100] shadow-2xl flex flex-col gap-8 p-8 pt-24 transition-transform duration-300 translate-x-full md:hidden';
+    mobileMenu.innerHTML = `
+        <a href="#about" class="nav-link block py-2 text-lg text-slate-200">About</a>
+        <a href="#skills" class="nav-link block py-2 text-lg text-slate-200">Skills</a>
+        <a href="#hackathons" class="nav-link block py-2 text-lg text-slate-200">Works</a>
+        <a href="#workexperience" class="nav-link block py-2 text-lg text-slate-200">Experience</a>
+        <a href="#hackathons" class="nav-link block py-2 text-lg text-slate-200">Events</a>
+        <a href="#contact" class="nav-link block py-2 text-lg text-slate-200">Contact</a>
+        <a href="#contact" class="mt-8 bg-blue-600 text-white px-6 py-3 rounded-xl text-center font-black uppercase tracking-widest shadow-xl">Hire Me</a>
+    `;
+    document.body.appendChild(mobileMenu);
+}
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+});
+
+// Hide mobile menu on link click
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+    });
+});
+
+// Close mobile menu on outside click
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add('translate-x-full');
+    }
+});
+</script>
 </body>
 
 </html>
