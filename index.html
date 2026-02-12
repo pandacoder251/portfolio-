@@ -1,20 +1,240 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Premium Fonts -->
+
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&f[]=satoshi@700,500,400&display=swap"
+    rel="stylesheet">
+<!-- AOS Animation Library -->
+<link rel="stylesheet" href="../style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+    :root {
+        --accent: #3b82f6;
+        --accent-glow: rgba(59, 130, 246, 0.5);
+    }
+
+    body {
+        font-family: 'inherit';
+        background-color: #020617;
+        color: #f8fafc;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-heading {
+        font-family: 'Open Sans';
+    }
+
+    .text-huge {
+        font-size: clamp(3rem, 10vw, 8.5rem);
+        line-height: 0.9;
+        letter-spacing: -0.05em;
+    }
+
+    .grid-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(circle at 50% 50%, black, transparent);
+    }
+
+    .glass-card {
+        background: rgba(15, 23, 42, 0.137);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .glass-card:hover {
+        border-color: rgba(59, 130, 246, 0.4);
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #fff 0%, #60a5fa 40%, #a78bfa 80%, #f472b6 100%);
+        background-size: 200% 200%;
+        background-position: left;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        animation: gradient-move 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            background-position: left;
+        }
+
+        100% {
+            background-position: right;
+        }
+    }
+
+
+    .animated-underline {
+        position: relative;
+        display: inline-block;
+    }
+
+    .animated-underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 0;
+        height: 8px;
+        background: rgba(59, 130, 246, 0.25);
+        z-index: -1;
+        transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .animated-underline.active::after,
+    .animated-underline:hover::after {
+        width: 100%;
+    }
+
+    #cursor {
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+        transition: transform 0.15s ease-out;
+        transform: translate(-50%, -50%);
+    }
+
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #3b82f6;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .skill-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .skill-item:hover {
+        background: rgba(59, 130, 246, 0.1);
+        border-color: rgba(59, 130, 246, 0.3);
+        transform: translateX(8px);
+    }
+
+    /* Modern Typography Treatment */
+    .text-huge {
+        font-size: clamp(2.2rem, 7vw, 5.5rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+    }
+
+    /* Mesh Gradient Background */
+    .mesh-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background-color: #020617;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.32) 0px, transparent 60%),
+            radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.28) 0px, transparent 60%),
+            radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.18) 0px, transparent 60%),
+            radial-gradient(at 0% 100%, rgba(147, 51, 234, 0.18) 0px, transparent 60%);
+    }
+
+    /* SVG Grid Overlay */
+    .grid-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 60L0 60 0 0 60 0 60 60zM1 59L59 59 59 1 1 1 1 59z' fill='%23ffffff' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #020617;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6;
+    }
+
+    .reveal-up {
+        overflow: hidden;
+    }
+
+
+
+    @media (max-width: 768px) {
+        .text-huge {
+            font-size: 3.5rem;
+        }
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pousali | Personal Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-   
+
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&f[]=satoshi@700,500,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-   
-        
+
+
 </head>
 
 <body class="selection:bg-blue-500/30">
@@ -346,7 +566,8 @@
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
                     <div data-aos="fade-right">
-                        <span class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Certifications</span>
+                        <span
+                            class="text-blue-500 font-bold tracking-[0.5em] text-[10px] mb-8 block">Certifications</span>
                         <h2 class="text-4xl md:text-6xl font-bold leading-[0.9] tracking-tighter">
                             Professional<br><span class="italic text-slate-500 animated-underline">Journey</span>
                         </h2>
@@ -513,8 +734,9 @@
             <div class="max-w-5xl mx-auto glass-card p-16 md:p-32 rounded-[4rem] text-center relative overflow-hidden"
                 data-aos="zoom-in">
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-6xl font-bold mb-12 tracking-tighter leading-[0.95]"> 
-                        <span class="font-extrabold mb-8 gradient-text"> Let's build </span><br><span class="italic text-slate-500 animated-underline">The Future</span>
+                    <h2 class="text-3xl md:text-6xl font-bold mb-12 tracking-tighter leading-[0.95]">
+                        <span class="font-extrabold mb-8 gradient-text"> Let's build </span><br><span
+                            class="italic text-slate-500 animated-underline">The Future</span>
                     </h2>
 
                     <div class="flex flex-wrap justify-center gap-6 mt-16">
@@ -653,31 +875,31 @@
             });
         });
     </script>
-</script>
-<script>
-// Smooth scroll for nav links
-document.querySelectorAll('nav a.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
-});
+    </script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
 
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-let mobileMenu = document.getElementById('mobile-menu');
-if (!mobileMenu) {
-    // Create mobile menu if not present
-    mobileMenu = document.createElement('nav');
-    mobileMenu.id = 'mobile-menu';
-    mobileMenu.className = 'fixed top-0 right-0 w-2/3 max-w-xs h-full bg-slate-900 z-[100] shadow-2xl flex flex-col gap-8 p-8 pt-24 transition-transform duration-300 translate-x-full md:hidden';
-    mobileMenu.innerHTML = `
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        let mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu) {
+            // Create mobile menu if not present
+            mobileMenu = document.createElement('nav');
+            mobileMenu.id = 'mobile-menu';
+            mobileMenu.className = 'fixed top-0 right-0 w-2/3 max-w-xs h-full bg-slate-900 z-[100] shadow-2xl flex flex-col gap-8 p-8 pt-24 transition-transform duration-300 translate-x-full md:hidden';
+            mobileMenu.innerHTML = `
         <a href="#about" class="nav-link block py-2 text-lg text-slate-200">About</a>
         <a href="#skills" class="nav-link block py-2 text-lg text-slate-200">Skills</a>
         <a href="#hackathons" class="nav-link block py-2 text-lg text-slate-200">Works</a>
@@ -686,27 +908,27 @@ if (!mobileMenu) {
         <a href="#contact" class="nav-link block py-2 text-lg text-slate-200">Contact</a>
         <a href="#contact" class="mt-8 bg-blue-600 text-white px-6 py-3 rounded-xl text-center font-black uppercase tracking-widest shadow-xl">Hire Me</a>
     `;
-    document.body.appendChild(mobileMenu);
-}
+            document.body.appendChild(mobileMenu);
+        }
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-});
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
 
-// Hide mobile menu on link click
-mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-    });
-});
+        // Hide mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
 
-// Close mobile menu on outside click
-document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        mobileMenu.classList.add('translate-x-full');
-    }
-});
-</script>
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        });
+    </script>
 </body>
 
 </html>
